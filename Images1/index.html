@@ -1,140 +1,154 @@
-<style>
-body {
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background-color: black; color: white; font-family: sans-serif; margin: 0; padding: 0; }
+
+        #landing-page { 
+            height: 100vh; 
+            width: 100%;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background-color: black; 
+        }
+
+        #landing-page img { max-width: 300px; height: auto; display: block; }
+
+        #gallery-page { display: none; padding: 20px; }
         
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-        }
-        #landing-page {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        #gallery-page {
-            display: none;
-            padding: 20px;
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 15px; 
             max-width: 1000px;
             margin: 0 auto;
         }
-        .stone-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .stone-card {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            padding: 15px;
+
+        .stone-card { 
+            background-color: #1a1a1a; 
+            padding: 10px; 
+            border: 1px solid #333; 
+            border-radius: 8px; 
             text-align: center;
-            border-radius: 8px;
         }
-        .stone-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
+        
+        .stone-card img { 
+            width: 100%; 
+            height: 140px; 
+            object-fit: contain; 
+            background-color: #000;
+            border-radius: 4px; 
         }
-        .stone-card h3 {
-            margin: 15px 0 10px 0;
-            color: #fbfbfa;
+
+        button { 
+            padding: 15px 40px; 
+            font-size: 20px; 
+            cursor: pointer; 
+            background-color: #b22222; 
+            color: white; 
+            border: none; 
+            border-radius: 50px; 
+            margin-top: 20px;
         }
-        .stone-card p {
-            font-size: 0.95em;
-            color: #bbb;
-            min-height: 40px;
-        }
-        .stone-details {
-            margin-top: 15px;
-            border-top: 1px solid #333;
-            padding-top: 10px;
-            font-size: 0.9em;
-            text-align: left;
-        }
-        .stone-details p {
-            margin: 5px 0;
-            min-height: auto;
-            color: #ddd;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            background-color: #222;
-            border: 1px solid #444;
-            color: #fff;
-            box-sizing: border-box;
-        }
-        .payment-section {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
+
+        .footer {
+            margin-top: 40px;
             padding: 20px;
+            border-top: 1px solid #333;
             text-align: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
         }
-        .payment-container {
+
+        .payment-section {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .barcode-container {
             display: flex;
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
-            margin-top: 15px;
         }
-        .payment-card img {
-            width: 150px;
-            height: 150px;
-            object-fit: contain;
-            border-radius: 4px;
-            background-color: #fff;
+
+        .barcode-box {
+            text-align: center;
+        }
+
+        .barcode-box img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 8px;
+            background: white;
             padding: 5px;
         }
-        .submit-order-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+
+        .order-form-section {
+            margin-top: 40px;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .order-form-section h3 {
+            text-align: center;
+            color: #ffeb3b;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
-            font-size: 1.1em;
-            font-weight: bold;
+            padding: 10px;
+            background-color: #000;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-        .submit-order-btn:hover {
-            background-color: #45a049;
-        }
-        .enter-btn {
-            background-color: #d62e08;
-            color: #121212;
-            padding: 15px 30px;
-            font-size: 1.2em;
+
+        .submit-order-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
             border: none;
+            border-radius: 4px;
+            font-size: 16px;
             cursor: pointer;
-            font-weight: bold;
-        }
-        .enter-btn:hover {
-            background-color: #da2104;
+            margin-top: 10px;
         }
     </style>
 </head>
-<body>
 
-<!-- Landing Page -->
-<div id="landing-page">
-    <img src="logo.png" alt="Gem Fetish Logo" class="landing-logo">
-    <div style="font-family: serif; font-size: 20px; color: #e0e0e0; margin-bottom: 30px;"></div>
-    <button class="enter-btn" onclick="enterSite()">Enter Collection</button>
-</div>
-    <!-- Gallery & Order Page -->
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <img src="logo.png" alt="Logo">
+        <button onclick="enterSite()">Enter Collection</button>
+    </div>
+
+    <!-- Gallery Page -->
     <div id="gallery-page">
-        <h2>Gemstone Collection & Stone Cards</h2>
-        
-        <div class="stone-grid">
+        <div class="grid">
+
             <!-- 1. African Blood Stone -->
             <div class="stone-card">
                 <img src="African-Blood-Stone-10mm.jpg" alt="African Blood Stone">
@@ -471,66 +485,58 @@ body {
                 </div>
             </div>
 
-            <!-- 29. Angelite -->
             <div class="stone-card">
-                <img src="Angelite-10mm.jpg" alt="Angelite">
-                <h3>Angelite</h3>
-                <p>Angelite is a calming stone that promotes peace, compassion, and understanding.</p>
-                <div class="stone-details">
-                    <p><strong>Stone Size:</strong> 10mm</p>
-                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                 <img src="Angelite-10mm.jpg" alt="Angelite">
+                 <h3>Angelite (10mm)</h3>
+                 <p>Angelite is a calming stone that promotes peace, compassion, and understanding.</p>
+                 <div class="stone-details">
+                     <p><strong>Stone Size:</strong> 10mm</p>
+                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                     <p><strong>Price:</strong> $25.00</p>
+                 </div>
+             </div>
+         </div>   
+         
+         <!-- End of grid -->
+
+        <!-- Footer Section with Pay Button, Barcodes, Order Form, Policies -->
+        <div class="footer">
+            <p>Ready to purchase via Square? Click below:</p>
+            <a href="your-payment-link-here" style="background-color: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;">Buy Now via Square</a>
+            
+            <p style="margin-top: 15px; font-size: 0.9em; color: #ffeb3b;">
+                <em>Please remember to select your wrist size (X-Small to X-Large) in the note/comment section at checkout!</em>
+            </p>
+
+            <!-- Payment Barcodes Section -->     
+            <div class="payment-section">
+                <p>Or scan below to pay via Cash App or Venmo:</p>
+                <div class="barcode-container">
+                    <div class="barcode-box">
+                        <img src="barcode.png" alt="Scan to Pay - Cash App and Venmo" style="max-width: 350px;">
+                    </div>
                 </div>
-            </div>
-        </div>
-
-      <div style="text-align: center; max-width: 500px; margin: 0 auto;">
-    <h2>Order Details</h2>
-    <form action="#" method="POST">
-        <div class="form-group">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-        </form>
-      </div>  
-</div>
+             <div class="footer">
+    <!-- Customer Order Form Section -->
+    <div class="order-form-section">
+        <h3>Customer Order Form</h3>
+        <form action="#" method="POST">
             <div class="form-group">
-                <label for="stone">Gemstone Selection:</label>
-                <select id="stone" name="stone">
-                    <option value="African Blood Stone">African Blood Stone</option>
-                    <option value="Sodalite">Sodalite</option>
-                    <option value="Red Carnelian">Red Carnelian</option>
-                    <option value="Dragon Stone">Dragon Stone</option>
-                    <option value="Green Aventurine">Green Aventurine</option>
-                    <option value="Red Agate">Red Agate</option>
-                    <option value="Honey Tigers Eye">Honey Tigers Eye</option>
-                    <option value="Purple Tigers Eye">Purple Tigers Eye</option>
-                    <option value="Lepidolite">Lepidolite</option>
-                    <option value="Rhodonite">Rhodonite</option>
-                    <option value="Onyx">Onyx</option>
-                    <option value="Howlite">Howlite</option>
-                    <option value="Unakite">Unakite</option>
-                    <option value="Green Moss Agate">Green Moss Agate</option>
-                    <option value="Fluorite">Fluorite</option>
-                    <option value="Ruby Zoisite">Ruby Zoisite</option>
-                    <option value="Tigers Eye">Tigers Eye</option>
-                    <option value="Map Stone">Map Stone</option>
-                    <option value="Hematite">Hematite</option>
-                    <option value="Pietersite">Pietersite</option>
-                    <option value="Smoky Quartz">Smoky Quartz</option>
-                    <option value="Garnet">Garnet</option>
-                    <option value="Citrine">Citrine</option>
-                    <option value="Rose Quartz">Rose Quartz</option>
-                    <option value="Amethyst">Amethyst</option>
-                    <option value="Black Obsidian">Black Obsidian</option>
-                    <option value="Labradorite">Labradorite</option>
-                    <option value="Turquoise">Turquoise</option>
-                    <option value="Angelite">Angelite</option>
-                </select>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
-
             <div class="form-group">
-                <label for="size">Wrist Size / Customization:</label>
-                <select id="size" name="size">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="stone-selection">Selected Stone(s) 6mm, 8mm, 10mm:</label>
+                <input type="text" id="stone-selection" name="stone-selection" placeholder="Enter stone selections">
+            </div>
+            <div class="form-group">
+                <label for="wrist-size">Wrist Size:</label>
+                <select id="wrist-size" name="wrist-size" required>
+                    <option value="">Select your wrist size</option>
                     <option value="X-Small">X-Small</option>
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
@@ -538,46 +544,119 @@ body {
                     <option value="X-Large">X-Large</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="notes">Additional Notes / Customizations:</label>
                 <textarea id="notes" name="notes" rows="3"></textarea>
             </div>
+            <button type="submit" class="submit-order-btn">Submit Order Details</button>
+        </form>
+    </div>
 
-            <!-- Payment Barcodes Section -->
-            <div class="payment-section">
-                <h3>Scan to Pay (Cash App / Venmo)</h3>
-                <p style="font-size: 0.9em; color: #aaa;">Scan either QR code below to complete your payment.</p>
-                <div class="payment-container">
-                    <div class="payment-card">
-                        <img src="barcode.png" alt="Cash App QR Code">
-                        <p style="margin: 8px 0 0 0; font-size: 0.9em;">Cash App</p>
+    <p style="margin-top: 30px; font-size: 0.9em;">
+        <strong>Return Policy:</strong> Due to the sensitive metaphysical nature of the frequency of gemstones, returns are not accepted.
+    </p>
+
+    <p style="font-size: 0.9em; color: #aaa;">
+        <em>Note: Under no circumstances will repairs be made due to normal wear and tear or environmental factors, such as water damage, extreme stretching of elastic cording, or cosmetic chemical damage including lotion, oils, perfumes, or any other factor which can weaken stone beads or cording.</em>
+</div class="footer">
+
+<!-- Customer Order Form Section -->
+            <div class="footer">
+    <!-- Customer Order Form Section -->
+    <div class="order-form-section">
+        <h3>Customer Order Form</h3>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="stone-selection">Selected Stone(s) 6mm, 8mm, 10mm:</label>
+                <input type="text" id="stone-selection" name="stone-selection" placeholder="Enter stone selections">
+            </div>
+            <div class="form-group">
+                <label for="wrist-size">Wrist Size:</label>
+                <select id="wrist-size" name="wrist-size" required>
+                    <option value="">Select your wrist size</option>
+                    <option value="X-Small">X-Small</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="X-Large">X-Large</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notes">Additional Notes / Customizations:</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+            </div>
+            <button type="submit" class="submit-order-btn">Submit Order Details</button>
+        </form>
+    </div>
+
+    <p style="margin-top: 30px; font-size: 0.9em;">
+        <strong>Return Policy:</strong> Due to the sensitive metaphysical nature of the frequency of gemstones, returns are not accepted.
+    </p>
+
+    <p style="font-size: 0.9em; color: #aaa;">
+        <em>Note: Under no circumstances will repairs be made due to normal wear and tear or environmental factors, such as water damage, extreme stretching of elastic cording, or cosmetic chemical damage including lotion, oils, perfumes, or any other factor which can weaken stone beads or cording.</em>
+    </p>
+</div><div class="order-form-section">
+                <h3>Customer Order Form</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    
-<button type="submit" class="submit-order-btn">Submit Order Details</button>
-</form> 
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stone-selection">Selected Stone(s) 6mm, 8mm, 10mm:</label>
+                        <input type="text" id="stone-selection" name="stone-selection" placeholder="e.g., Sodalite, Red Carnelian" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="wrist-size">Wrist Size:</label>
+                        <select id="wrist-size" name="wrist-size" required>
+                            <option value="">Select your wrist size</option>
+                            <option value="X-Small">X-Small</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="X-Large">X-Large</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Additional Notes / Customizations:</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                   </div>
+                <button type="submit" class="submit-order-btn">Submit Order Details</button>
+            </form>
+       </div>
+                <button type="submit" class="submit-order-btn">Submit Order Details</button>
+            </form>
+        </div>
 
-<p style="margin-top: 30px; font-size: 0.9em;">
-    <strong>Return Policy:</strong> Due to the sensitive metaphysical nature of the frequency of gemstones, returns are not accepted.
-</p>
- <div style="text-align: center; margin: 30px 0;">
-    <a href="https://square.link/u/3VIdaKcr" target="_blank" style="background-color: #050505; color: #f8fff6; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 1em; display: inline-block;">Pay with Square</a>
-</div>          
-         
-            <p style="font-size: 0.9em; color: #aaa;">
-    <em>Note:</em> Under no circumstances will repairs be made due to normal wear and tear or environmental factors, such as water damage, extreme stretching of elastic cording, or cosmetic chemical damage, (including lotion, oils, perfumes), or any other factor which can weaken stone beads or cording.
-</p>
-<div class="music-player-section" style="text-align: center; margin: 20px 0;">
+        <p style="margin-top: 30px; font-size: 0.9em;">
+            <strong>Return Policy:</strong> Due to the sensitive metaphysical nature of the frequency of gemstones, returns are not accepted. 
+        </p>
+    </div>
+    
+    <div class="music-player-section" style="text-align: center; margin: 20px 0;">
         <h3>Vibe Out While You Shop</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/c1GUGiQMHwM" title="Arabian Jazz Fusion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    </div> <!-- End of gallery-page -->
+</div> <!-- End of gallery-page -->
 
-    <script>
-        function enterSite() {
-            document.getElementById('landing-page').style.display = 'none';
-            document.getElementById('gallery-page').style.display = 'block';
-        }
-    </script>
+<script>
+    function enterSite() {
+        document.getElementById('landing-page').style.display = 'none';
+        document.getElementById('gallery-page').style.display = 'block';
+    }
+</script>
 </body>
 </html>
