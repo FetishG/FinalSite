@@ -1,6 +1,11 @@
-<style>
-body {
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gem Fetish</title>
+    <style>
+        body {
             font-family: Arial, sans-serif;
             background-color: #121212;
             color: #e0e0e0;
@@ -31,69 +36,34 @@ body {
             border-radius: 8px;
         }
         .stone-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .stone-card h3 {
-            margin: 15px 0 10px 0;
-            color: #fbfbfa;
+            width: 100% !important;
+            height: 200px !important;
+            object-fit: cover !important;
+            border-radius: 6px;
         }
         .stone-card p {
             font-size: 0.95em;
             color: #bbb;
             min-height: 40px;
         }
-        .stone-details {
-            margin-top: 15px;
-            border-top: 1px solid #333;
-            padding-top: 10px;
-            font-size: 0.9em;
-            text-align: left;
-        }
-        .stone-details p {
-            margin: 5px 0;
-            min-height: auto;
-            color: #ddd;
-        }
         .form-group {
             margin-bottom: 15px;
+            text-align: left;
         }
         .form-group label {
             display: block;
             margin-bottom: 5px;
+            font-weight: bold;
         }
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 8px;
-            background-color: #222;
             border: 1px solid #444;
+            background-color: #1a1a1a;
             color: #fff;
-            box-sizing: border-box;
-        }
-        .payment-section {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .payment-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-        .payment-card img {
-            width: 150px;
-            height: 150px;
-            object-fit: contain;
             border-radius: 4px;
-            background-color: #fff;
-            padding: 5px;
         }
         .submit-order-btn {
             background-color: #4CAF50;
@@ -104,6 +74,7 @@ body {
             width: 100%;
             font-size: 1.1em;
             font-weight: bold;
+            border-radius: 4px;
         }
         .submit-order-btn:hover {
             background-color: #45a049;
@@ -116,6 +87,7 @@ body {
             border: none;
             cursor: pointer;
             font-weight: bold;
+            border-radius: 4px;
         }
         .enter-btn:hover {
             background-color: #da2104;
@@ -124,42 +96,46 @@ body {
 </head>
 <body>
 
-<!-- Landing Page -->
-<div id="landing-page">
-    <img src="logo.png" alt="Gem Fetish Logo" class="landing-logo">
-    <div style="font-family: serif; font-size: 20px; color: #e0e0e0; margin-bottom: 30px;"></div>
-    <button class="enter-btn" onclick="enterSite()">Enter Collection</button>
+   <!-- Landing Page -->
+<div id="landing-page" style="text-align: center; padding: 40px 20px; background-color: #111; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <img src="logo.png" alt="Gem Fetish Logo" style="max-width: 600px; width: 90%; height: auto; display: block; margin-bottom: 30px;">
+    <h1 style="color: #fff; margin-bottom: 10px;">Welcome to Gem Fetish</h1>
+    <p style="color: #ccc; margin-bottom: 25px;">Explore our exclusive collection of handmade gemstone bead bracelets.</p>
+    <button class="enter-btn" onclick="enterSite()">Enter Site</button>
 </div>
-    <!-- Gallery & Order Page -->
+    <!-- Gallery Page -->
     <div id="gallery-page">
-        <h2>Gemstone Collection & Stone Cards</h2>
-        
+        <div id="landing-page">
+    <img src="logo.png" alt="Gem Fetish Logo" style="max-width: 180px; display: block; margin: 0 auto 20px auto;">
+    <h1>Welcome to Gem Fetish</h1>
+    <p>Explore our exclusive collection of handmade gemstone bead bracelets.</p>
+    <button class="enter-btn" onclick="enterSite()">Enter Site</button>
+</div>
+        <h2 style="text-align: center;">Gemstone Collection</h2>
         <div class="stone-grid">
-            <!-- 1. african Blood Stone -->
+            <!-- 1. African Blood Stone -->
             <div class="stone-card">
                 <img src="african-blood-stone-10mm.jpg" alt="african blood stone">
                 <h3>african blood stone</h3>
-                <p>A powerhouse of grounding energy, vitality, and physical endurance.</p>
+                <p>An inspiring stone that promotes courage, grounding, and revitalization.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $30.00</p>
+                    <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 2. sodalite -->
+            <!-- 2. Sodalite -->
             <div class="stone-card">
                 <img src="sodalite-10mm.jpg" alt="sodalite">
                 <h3>sodalite</h3>
-                <p>Encourages rational thought, objectivity, truth, and emotional balance.</p>
+                <p>Brings order and calmness to the mind, encouraging rational thought and truth.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $30.00</p>
+                    <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 3. red Carnelian -->
+            <!-- 3. Red Carnelian -->
             <div class="stone-card">
                 <img src="red-carnelian-10mm.png" alt="red carnelian">
                 <h3>red carnelian</h3>
@@ -170,32 +146,29 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 4. dragon Stone -->
+            <!-- 4. Dragon Stone -->
             <div class="stone-card">
                 <img src="dragon-stone-10mm.jpg" alt="dragon stone">
                 <h3>dragon stone</h3>
-                <p>Stimulates the higher heart chakra, promoting love, compassion, and power.</p>
+                <p>Stimulates life force energy, personal power, and inner strength.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 5. green Aventurine -->
+            <!-- 5. Green Aventurine -->
             <div class="stone-card">
                 <img src="green-aventurine-10mm.jpg" alt="green aventurine">
                 <h3>green aventurine</h3>
-                <p>Known as the stone of opportunity, great for manifesting abundance and luck.</p>
+                <p>Known as the stone of opportunity, comforting the heart and attracting good luck.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 6. red agate -->
+            <!-- 6. Red Agate -->
             <div class="stone-card">
                 <img src="red-agate-10mm.jpg" alt="red agate">
                 <h3>red agate</h3>
@@ -206,44 +179,40 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 7. honey tigers eye -->
+            <!-- 7. Honey Tigers Eye -->
             <div class="stone-card">
                 <img src="honey-tigers-eye-10mm.jpg" alt="honey tigers eye">
                 <h3>honey tigers eye</h3>
-                <p>Combines earth energy with sun energy to create a high-vibrational grounding state.</p>
+                <p>A powerful stone that helps you release fear and anxiety while providing harmony.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $30.00</p>
+                    <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 8. purple tigers eye -->
+            <!-- 8. Purple Tigers Eye -->
             <div class="stone-card">
                 <img src="purple-tigers-eye-10mm.jpg" alt="purple tigers eye">
                 <h3>purple tigers eye</h3>
-                <p>Alleviates stress and brings a calm, focused clarity to the creative mind.</p>
+                <p>Enhances personal power and clear thinking while providing a calming presence.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 9. lepidolite -->
+            <!-- 9. Lepidolite -->
             <div class="stone-card">
                 <img src="lepidolite-10mm.jpg" alt="lepidolite">
                 <h3>lepidolite</h3>
-                <p>Contains natural lithium which helps dissipate negativity and soothe the soul.</p>
+                <p>A stone of transition that helps clear emotional blocks and induces deep relaxation.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 10. rhodonite -->
+            <!-- 10. Rhodonite -->
             <div class="stone-card">
                 <img src="rhodonite-10mm.jpg" alt="rhodonite">
                 <h3>rhodonite</h3>
@@ -254,128 +223,117 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 11. onyx -->
+            <!-- 11. Onyx -->
             <div class="stone-card">
                 <img src="onyx-10mm.jpg" alt="onyx">
                 <h3>onyx</h3>
-                <p>Provides strength during difficult times, fostering wise decision-making.</p>
+                <p>Provides strength and steadfast support during difficult or stressful times.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 12. howlite -->
+            <!-- 12. Howlite -->
             <div class="stone-card">
                 <img src="howlite-10mm.jpg" alt="howlite">
                 <h3>howlite</h3>
-                <p>An extraordinarily calming stone, highly effective against insomnia and stress.</p>
+                <p>An extremely calming stone that relieves stress, anger, and selfish behavior.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 13. unakite -->
+            <!-- 13. Unakite -->
             <div class="stone-card">
                 <img src="unakite-10mm.jpg" alt="unakite">
                 <h3>unakite</h3>
-                <p>Facilitates rebirthing, gently releasing conditions that block spiritual growth.</p>
+                <p>Balances emotional energy with spiritual insights, promoting healthy relationships.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 14. green Moss Agate -->
+            <!-- 14. Green Moss Agate -->
             <div class="stone-card">
                 <img src="green-moss-agate-10mm.jpg" alt="green moss agate">
                 <h3>green moss agate</h3>
-                <p>A stone of wealth, freshness, and new beginnings connected to nature.</p>
+                <p>A stone of new beginnings, refreshing the soul and enabling you to see beauty in all.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 15. fluorite -->
+            <!-- 15. Fluorite -->
             <div class="stone-card">
                 <img src="fluorite-10mm.jpg" alt="fluorite">
                 <h3>fluorite</h3>
-                <p>Highly protective and cleansing, absorbing negative energies from the environment.</p>
+                <p>Highly protective and cleansing, absorbing negative energies and stress from the environment.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 16. ruby zoisite -->
+            <!-- 16. Ruby Zoisite -->
             <div class="stone-card">
                 <img src="ruby-zoisite-10mm.jpg" alt="ruby zoisite">
                 <h3>ruby zoisite</h3>
-                <p>Creates an altered state of consciousness, helping you link to your divine mind.</p>
+                <p>Creates an altered state of consciousness, enabling access to soul memory and spiritual learning.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 17. tigers Eye -->
+            <!-- 17. Tigers Eye -->
             <div class="stone-card">
-                <img src="tigers-eye-10mm.jpg" alt="tigers Eye">
-                <h3>tigers Eye</h3>
-                <p>Brings good luck, mental clarity, and deep personal empowerment.</p>
+                <img src="tigers-eye-10mm.jpg" alt="tigers eye">
+                <h3>tigers eye</h3>
+                <p>Combines earth energy with sun energy to create a high vibrational grounded state.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 18. map stone -->
+            <!-- 18. Map Stone -->
             <div class="stone-card">
                 <img src="map-stone-10mm.jpg" alt="map stone">
                 <h3>map stone</h3>
-                <p>Inspires grounding, patience, and connection to creative visualization.</p>
+                <p>Encourages patience, grounding, and a deep connection to Mother Earth.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
             <!-- 19. Hematite -->
             <div class="stone-card">
                 <img src="hematite-10mm.jpg" alt="hematite">
                 <h3>hematite</h3>
-                <p>Renowned for its grounding strength, shielding against toxic emotional energy.</p>
+                <p>Legendary for its grounding and protective strength, keeping you feeling safe and secure.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 20. pietersite -->
+            <!-- 20. Pietersite -->
             <div class="stone-card">
                 <img src="pietersite-10mm.jpg" alt="pietersite">
                 <h3>pietersite</h3>
-                <p>Carries a charge that stimulates the energy field, clearing out spiritual stagnation.</p>
+                <p>Disperses spiritual illusion and removes the feeling of being stuck in life.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 21. smoky quartz -->
+            <!-- 21. Smoky Quartz -->
             <div class="stone-card">
                 <img src="smoky-quartz-10mm.jpg" alt="smoky quartz">
                 <h3>smoky quartz</h3>
@@ -386,20 +344,18 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 22. garnet -->
+            <!-- 22. Garnet -->
             <div class="stone-card">
                 <img src="garnet-10mm.jpg" alt="garnet">
                 <h3>garnet</h3>
-                <p>A revitalizing stone that cleans and re-energizes chakras with devotion and passion.</p>
+                <p>A passionate stone of revitalization, devotion, and balancing energy.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $30.00</p>
+                    <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 23. citrine -->
+            <!-- 23. Citrine -->
             <div class="stone-card">
                 <img src="citrine-10mm.jpg" alt="citrine">
                 <h3>citrine</h3>
@@ -410,8 +366,7 @@ body {
                     <p><strong>Price:</strong> $30.00</p>
                 </div>
             </div>
-
-            <!-- 24. rose quartz -->
+            <!-- 24. Rose Quartz -->
             <div class="stone-card">
                 <img src="rose-quartz-10mm.jpg" alt="rose quartz">
                 <h3>rose quartz</h3>
@@ -422,8 +377,7 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 25. amethyst -->
+            <!-- 25. Amethyst -->
             <div class="stone-card">
                 <img src="amethyst-10mm.jpg" alt="amethyst">
                 <h3>amethyst</h3>
@@ -434,8 +388,7 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 26. black obsidian -->
+            <!-- 26. Black Obsidian -->
             <div class="stone-card">
                 <img src="black-obsidian-10mm.jpg" alt="black obsidian">
                 <h3>black obsidian</h3>
@@ -446,8 +399,7 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
-
-            <!-- 27. labradorite -->
+            <!-- 27. Labradorite -->
             <div class="stone-card">
                 <img src="labradorite-10mm.jpg" alt="labradorite">
                 <h3>labradorite</h3>
@@ -458,8 +410,7 @@ body {
                     <p><strong>Price:</strong> $30.00</p>
                 </div>
             </div>
-
-            <!-- 28. turquoise -->
+            <!-- 28. Turquoise -->
             <div class="stone-card">
                 <img src="turquoise-10mm.jpg" alt="turquoise">
                 <h3>turquoise</h3>
@@ -470,11 +421,97 @@ body {
                     <p><strong>Price:</strong> $30.00</p>
                 </div>
             </div>
-
-            <!-- 29. Angelite -->
+            <!-- 29. Dalmatian Jasper -->
             <div class="stone-card">
-                <img src="Angelite-10mm.jpg" alt="Angelite">
-                <h3>Angelite</h3>
+                <img src="dalmatian-jasper-10mm.jpeg" alt="dalmatian jasper">
+                <h3>Dalmatian jasper</h3>
+                <p>Dalmatian jasper is a grounding stone that promotes stability, strength, and emotional balance.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+            <!-- 30. Lapis Lazuli -->
+            <div class="stone-card">
+                <img src="lapis-lazuli-10mm.jpg" alt="lapis lazuli">
+                <h3>lapis lazuli</h3>
+                <p>lapis lazuli is a powerful stone that enhances intuition and promotes spiritual insight.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+            
+            <!-- 32. Aquamarine -->
+            <div class="stone-card">
+                <img src="aquamarine-10mm.jpg" alt="aquamarine">
+                <h3>aquamarine</h3>
+                <p>Aquamarine is a calming stone that promotes peace, compassion, and understanding.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+            <!-- 33. Blue Tigers Eye -->
+            <div class="stone-card">
+                <img src="blue-tigers-eye-10mm.jpg" alt="blue tigers eye">
+                <h3>blue tigers eye</h3>
+                <p>Blue tigers eye is a protective stone that enhances intuition and promotes emotional balance.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+            <!-- 34. Red Tigers Eye -->
+            <div class="stone-card">
+                <img src="red-tigers-eye-10mm.jpg" alt="red tigers eye">
+                <h3>red tigers eye</h3>
+                <p>Red tigers eye is a protective stone that enhances intuition and promotes emotional balance.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+            <!-- 35. Clear Quartz -->
+            <div class="stone-card">
+                <img src="clear-quartz-10mm.jpg" alt="clear quartz">
+                <h3>clear quartz</h3>
+                <p>A master healer stone that provides comfort for the spirit and well-being for the body.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+ <div class="stone-card">
+                <img src="map-stone-10mm.jpg" alt="map stone">
+                <h3>map stone</h3>
+                <p>Encourages patience, grounding, and a deep connection to Mother Earth.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+<div class="stone-card">
+                <img src="blue-aventurine-10mm.jpg"alt="blue aventurine">
+                <h3>blue aventurine</h3>
+                <p>It is considered the stone of self-discipline, inner strength, and emotional calm.</p>
+                <div class="stone-details">
+                    <p><strong>Stone Size:</strong> 10mm</p>
+                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
+                    <p><strong>Price:</strong> $25.00</p>
+                </div>
+            </div>
+            <!-- 36. Angelite -->
+            <div class="stone-card">
+                <img src="angelite-10mm.jpg" alt="angelite">
+                <h3>angelite</h3>
                 <p>Angelite is a calming stone that promotes peace, compassion, and understanding.</p>
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
@@ -482,102 +519,130 @@ body {
                     <p><strong>Price:</strong> $25.00</p>
                 </div>
             </div>
+        </div> <!-- Closes .stone-grid -->
+
+        <!-- Order Details Section -->
+        <div style="text-align: center; max-width: 500px; margin: 40px auto;">
+            <h2>Order Details</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>               
+                <div class="form-group">
+                    <label for="stone">Gemstone Selection:</label>
+                    <select id="stone" name="stone">
+                        <option value="African Blood Stone">African Blood Stone</option>
+                        <option value="Sodalite">Sodalite</option>
+                        <option value="Red Carnelian">Red Carnelian</option>
+                        <option value="Dragon Stone">Dragon Stone</option>
+                        <option value="Green Aventurine">Green Aventurine</option>
+                        <option value="Red Agate">Red Agate</option>
+                        <option value="Honey Tigers Eye">Honey Tigers Eye</option>
+                        <option value="Purple Tigers Eye">Purple Tigers Eye</option>
+                        <option value="Lepidolite">Lepidolite</option>
+                        <option value="Rhodonite">Rhodonite</option>
+                        <option value="Onyx">Onyx</option>
+                        <option value="Howlite">Howlite</option>
+                        <option value="Unakite">Unakite</option>
+                        <option value="Green Moss Agate">Green Moss Agate</option>
+                        <option value="Fluorite">Fluorite</option>
+                        <option value="Ruby Zoisite">Ruby Zoisite</option>
+                        <option value="Tigers Eye">Tigers Eye</option>
+                        <option value="Map Stone">Map Stone</option>
+                        <option value="Hematite">Hematite</option>
+                        <option value="Pietersite">Pietersite</option>
+                        <option value="Smoky Quartz">Smoky Quartz</option>
+                        <option value="Garnet">Garnet</option>
+                        <option value="Citrine">Citrine</option>
+                        <option value="Rose Quartz">Rose Quartz</option>
+                        <option value="Amethyst">Amethyst</option>
+                        <option value="Black Obsidian">Black Obsidian</option>
+                        <option value="Labradorite">Labradorite</option>
+                        <option value="Turquoise">Turquoise</option>
+                        <option value="Dalmatian Jasper">Dalmatian Jasper</option>
+                        <option value="Lapis Lazuli">Lapis Lazuli</option>
+                        <option value="Blue Aventurine">Blue Aventurine</option>
+                        <option value="Aquamarine">Aquamarine</option>
+                        <option value="Blue Tigers Eye">Blue Tigers Eye</option>
+                        <option value="Red Tigers Eye">Red Tigers Eye</option>
+                        <option value="Clear Quartz">Clear Quartz</option>
+                        <option value="Angelite">Angelite</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Wrist Size / Customization:</label>
+                    <select id="size" name="size">
+                        <option value="X-Small">X-Small</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="X-Large">X-Large</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes / Customizations:</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+  
+                <!-- Payment Barcodes Section -->
+<div class="payment-section">
+    <h3>Scan to Pay (Square / Cash App / Venmo)</h3>
+    <p style="font-size: 0.9em; color: #aaa;">Scan any QR code below to complete your payment.</p>
+    <div class="payment-container">
+        <!-- Cash App & Venmo Card -->
+        <div class="payment-card">
+            <img src="barcode.png" alt="Cash App & Venmo QR Codes">
         </div>
-
-      <div style="text-align: center; max-width: 500px; margin: 0 auto;">
-    <h2>Order Details</h2>
-    <form action="#" method="POST">
-        <div class="form-group">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-        </form>
-      </div>  
+        <!-- Square QR Code Card -->
+        <div class="payment-card">
+            <img src="IMAGES1/square-qr_2.png" alt="Square QR Code">
+        </div>
+    </div>
 </div>
-            <div class="form-group">
-                <label for="stone">Gemstone Selection:</label>
-                <select id="stone" name="stone">
-                    <option value="African Blood Stone">African Blood Stone</option>
-                    <option value="Sodalite">Sodalite</option>
-                    <option value="Red Carnelian">Red Carnelian</option>
-                    <option value="Dragon Stone">Dragon Stone</option>
-                    <option value="Green Aventurine">Green Aventurine</option>
-                    <option value="Red Agate">Red Agate</option>
-                    <option value="Honey Tigers Eye">Honey Tigers Eye</option>
-                    <option value="Purple Tigers Eye">Purple Tigers Eye</option>
-                    <option value="Lepidolite">Lepidolite</option>
-                    <option value="Rhodonite">Rhodonite</option>
-                    <option value="Onyx">Onyx</option>
-                    <option value="Howlite">Howlite</option>
-                    <option value="Unakite">Unakite</option>
-                    <option value="Green Moss Agate">Green Moss Agate</option>
-                    <option value="Fluorite">Fluorite</option>
-                    <option value="Ruby Zoisite">Ruby Zoisite</option>
-                    <option value="Tigers Eye">Tigers Eye</option>
-                    <option value="Map Stone">Map Stone</option>
-                    <option value="Hematite">Hematite</option>
-                    <option value="Pietersite">Pietersite</option>
-                    <option value="Smoky Quartz">Smoky Quartz</option>
-                    <option value="Garnet">Garnet</option>
-                    <option value="Citrine">Citrine</option>
-                    <option value="Rose Quartz">Rose Quartz</option>
-                    <option value="Amethyst">Amethyst</option>
-                    <option value="Black Obsidian">Black Obsidian</option>
-                    <option value="Labradorite">Labradorite</option>
-                    <option value="Turquoise">Turquoise</option>
-                    <option value="Angelite">Angelite</option>
-                </select>
-            </div>
 
-            <div class="form-group">
-                <label for="size">Wrist Size / Customization:</label>
-                <select id="size" name="size">
-                    <option value="X-Small">X-Small</option>
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                    <option value="X-Large">X-Large</option>
-                </select>
-            </div>
+<!-- Submit Order Details Button -->
+<div style="text-align: center; margin: 20px 0;">
+    <button type="submit" class="submit-order-btn" style="background-color: #28a745; color: white; padding: 12px 24px; font-size: 1em; border: none; border-radius: 5px; cursor: pointer;">Submit Order Details</button>
+</div>
+</form>
 
-            <div class="form-group">
-                <label for="notes">Additional Notes / Customizations:</label>
-                <textarea id="notes" name="notes" rows="3"></textarea>
-            </div>
-
-            <!-- Payment Barcodes Section -->
-            <div class="payment-section">
-                <h3>Scan to Pay (Cash App / Venmo)</h3>
-                <p style="font-size: 0.9em; color: #aaa;">Scan either QR code below to complete your payment.</p>
-                <div class="payment-container">
-                    <div class="payment-card">
-                        <img src="barcode.png" alt="Cash App QR Code">
-                        <p style="margin: 8px 0 0 0; font-size: 0.9em;">Cash App</p>
-                    </div>
-                    
-<button type="submit" class="submit-order-btn">Submit Order Details</button>
-</form> 
-
+<!-- Return Policy & Care Notice -->
 <p style="margin-top: 30px; font-size: 0.9em;">
     <strong>Return Policy:</strong> Due to the sensitive metaphysical nature of the frequency of gemstones, returns are not accepted.
 </p>
- <div style="text-align: center; margin: 30px 0;">
-    <a href="https://square.link/u/3VIdaKcr" target="_blank" style="background-color: #050505; color: #f8fff6; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 1em; display: inline-block;">Pay with Square</a>
-</div>          
-         
-            <p style="font-size: 0.9em; color: #aaa;">
+<p style="font-size: 0.9em; color: #aaa;">
     <em>Note:</em> Under no circumstances will repairs be made due to normal wear and tear or environmental factors, such as water damage, extreme stretching of elastic cording, or cosmetic chemical damage, (including lotion, oils, perfumes), or any other factor which can weaken stone beads or cording.
 </p>
-<div class="music-player-section" style="text-align: center; margin: 20px 0;">
-        <h3>Vibe Out While You Shop</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/c1GUGiQMHwM" title="Arabian Jazz Fusion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    </div> <!-- End of gallery-page -->
 
-    <script>
-        function enterSite() {
-            document.getElementById('landing-page').style.display = 'none';
-            document.getElementById('gallery-page').style.display = 'block';
+<!-- Vibe Out Section -->
+<div class="vibe-section">
+    <h3>Vibe Out While You Shop</h3>
+    <p>Now Playing: Best Hip Hop Soul, Neo Soul & Conscious Rap Mix</p>
+    
+    <!-- Embedded YouTube Player -->
+    <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/sEUnkZOiueg" title="Neo Soul & Conscious Rap Mix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Site Scripts -->
+<script>
+    function enterSite() {
+        // 1. Hide landing page and show gallery
+        document.getElementById('landing-page').style.display = 'none';
+        document.getElementById('gallery-page').style.display = 'block';
+
+        // 2. Trigger audio playback if available
+        var audioPlayer = document.getElementById('store-audio');
+        if (audioPlayer) {
+            audioPlayer.play().catch(function(error) {
+                console.log("Autoplay blocked by browser policy: ", error);
+            });
         }
-    </script>
+    }
+</script>
 </body>
 </html>
