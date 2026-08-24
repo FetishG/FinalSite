@@ -646,6 +646,25 @@
                     });
                 }
             }
-        </script>
+
+            // Search function to filter gemstone cards
+            function filterGems() {
+                var input = document.getElementById('gemSearch');
+                var filter = input.value.toLowerCase();
+                var cards = document.getElementsByClassName('stone-card');
+
+                for (var i = 0; i < cards.length; i++) {
+                    var title = cards[i].getElementsByTagName('h3')[0];
+                    if (title) {
+                        var textValue = title.textContent || title.innerText;
+                        if (textValue.toLowerCase().indexOf(filter) > -1) {
+                            cards[i].style.display = "";
+                        } else {
+                            cards[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script> <!-- PASTE IT RIGHT ABOVE THIS CLOSING ONE -->
         </body>
         </html>
