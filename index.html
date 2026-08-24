@@ -96,20 +96,22 @@
 </head>
 <body>
 
-   <!-- Landing Page -->
+<!-- Landing Page Splash Screen (Full Page Logo) -->
 <div id="landing-page" style="text-align: center; padding: 40px 20px; background-color: #111; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-    <img src="logo.png" alt="Gem Fetish Logo" style="max-width: 600px; width: 90%; height: auto; display: block; margin-bottom: 30px;">
-    <h1 style="color: #fff; margin-bottom: 10px;">Welcome to Gem Fetish</h1>
+    <img src="logo.png" alt="Gem Fetish Logo" style="max-width: 600px; width: 90%; height: auto; display: block; margin: 0 auto 30px auto;">
+    
     <p style="color: #ccc; margin-bottom: 25px;">Explore our exclusive collection of handmade gemstone bead bracelets.</p>
-    <button class="enter-btn" onclick="enterSite()">Enter Site</button>
+    <button class="enter-btn" onclick="enterSite()">Welcome</button>
 </div>
-    <!-- Gallery Page -->
-    <div id="gallery-page">
-        <div id="landing-page">
-    <img src="logo.png" alt="Gem Fetish Logo" style="max-width: 180px; display: block; margin: 0 auto 20px auto;">
-    <h1>Welcome to Gem Fetish</h1>
-    <p>Explore our exclusive collection of handmade gemstone bead bracelets.</p>
-    <button class="enter-btn" onclick="enterSite()">Enter Site</button>
+<!-- Gallery Page (Shows after clicking Enter Site) -->
+<div id="gallery-page" style="display: none; padding: 20px; text-align: center; background-color: #111;">
+    
+    <!-- Smaller Logo on top of the gallery page -->
+    <img src="logo.png" alt="Gem Fetish Logo" style="max-width: 140px; display: block; margin: 0 auto 15px auto;">
+    
+   <!-- Functional Search Bar -->
+<div style="text-align: center; margin-bottom: 30px;">
+    <input type="text" id="gemSearch" onkeyup="filterGems()" placeholder="Search for a gemstone (e.g., Amethyst, Tiger's Eye)..." style="padding: 10px 15px; width: 80%; max-width: 400px; border-radius: 6px; border: 1px solid #444; background: #222; color: #fff; font-size: 1em;">
 </div>
         <h2 style="text-align: center;">Gemstone Collection</h2>
         <div class="stone-grid">
@@ -121,7 +123,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 2. Sodalite -->
@@ -132,7 +134,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 3. Red Carnelian -->
@@ -143,7 +145,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 4. Dragon Stone -->
@@ -154,7 +156,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 5. Green Aventurine -->
@@ -165,7 +167,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 6. Red Agate -->
@@ -176,7 +178,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 7. Honey Tigers Eye -->
@@ -187,7 +189,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 8. Purple Tigers Eye -->
@@ -198,7 +200,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $40.00</p>
                 </div>
             </div>
             <!-- 9. Lepidolite -->
@@ -209,7 +211,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 10. Rhodonite -->
@@ -220,7 +222,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 11. Onyx -->
@@ -231,7 +233,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 12. Howlite -->
@@ -242,7 +244,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 13. Unakite -->
@@ -253,7 +255,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 14. Green Moss Agate -->
@@ -264,7 +266,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 15. Fluorite -->
@@ -275,7 +277,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $40.00</p>
                 </div>
             </div>
             <!-- 16. Ruby Zoisite -->
@@ -286,7 +288,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $40.00</p>
                 </div>
             </div>
             <!-- 17. Tigers Eye -->
@@ -297,7 +299,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 18. Map Stone -->
@@ -308,7 +310,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 19. Hematite -->
@@ -319,7 +321,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 20. Pietersite -->
@@ -330,7 +332,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $48.00</p>
                 </div>
             </div>
             <!-- 21. Smoky Quartz -->
@@ -341,7 +343,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 22. Garnet -->
@@ -352,7 +354,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $42.00</p>
                 </div>
             </div>
             <!-- 23. Citrine -->
@@ -363,7 +365,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $30.00</p>
+                    <p><strong>Price:</strong> $42.00</p>
                 </div>
             </div>
             <!-- 24. Rose Quartz -->
@@ -374,7 +376,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 25. Amethyst -->
@@ -385,7 +387,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 26. Black Obsidian -->
@@ -396,7 +398,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 27. Labradorite -->
@@ -407,7 +409,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $30.00</p>
+                    <p><strong>Price:</strong> $40.00</p>
                 </div>
             </div>
             <!-- 28. Turquoise -->
@@ -418,7 +420,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $30.00</p>
+                    <p><strong>Price:</strong> $45.00</p>
                 </div>
             </div>
             <!-- 29. Dalmatian Jasper -->
@@ -429,7 +431,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 30. Lapis Lazuli -->
@@ -440,7 +442,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $42.00</p>
                 </div>
             </div>
             
@@ -452,7 +454,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $45.00</p>
                 </div>
             </div>
             <!-- 33. Blue Tigers Eye -->
@@ -463,7 +465,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $38.00</p>
                 </div>
             </div>
             <!-- 34. Red Tigers Eye -->
@@ -474,7 +476,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 35. Clear Quartz -->
@@ -485,19 +487,9 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $32.00</p>
                 </div>
-            </div>
- <div class="stone-card">
-                <img src="map-stone-10mm.jpg" alt="map stone">
-                <h3>map stone</h3>
-                <p>Encourages patience, grounding, and a deep connection to Mother Earth.</p>
-                <div class="stone-details">
-                    <p><strong>Stone Size:</strong> 10mm</p>
-                    <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
-                </div>
-            </div>
+            </div> 
 <div class="stone-card">
                 <img src="blue-aventurine-10mm.jpg"alt="blue aventurine">
                 <h3>blue aventurine</h3>
@@ -505,7 +497,7 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
             <!-- 36. Angelite -->
@@ -516,19 +508,14 @@
                 <div class="stone-details">
                     <p><strong>Stone Size:</strong> 10mm</p>
                     <p><strong>Wrist Size:</strong> X-Small to X-Large</p>
-                    <p><strong>Price:</strong> $25.00</p>
+                    <p><strong>Price:</strong> $35.00</p>
                 </div>
             </div>
         </div> <!-- Closes .stone-grid -->
-
-        <!-- Order Details Section -->
         <div style="text-align: center; max-width: 500px; margin: 40px auto;">
             <h2>Order Details</h2>
             <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>               
+                                                                 
                 <div class="form-group">
                     <label for="stone">Gemstone Selection:</label>
                     <select id="stone" name="stone">
@@ -587,62 +574,78 @@
                     <textarea id="notes" name="notes" rows="3"></textarea>
                 </div>
   
-                <!-- Payment Barcodes Section -->
-<div class="payment-section">
+        <!-- Payment Barcodes Section -->
+<div class="payment-section" style="text-align: center; margin: 20px 0;">
     <h3>Scan to Pay (Square / Cash App / Venmo)</h3>
     <p style="font-size: 0.9em; color: #aaa;">Scan any QR code below to complete your payment.</p>
-    <div class="payment-container">
-        <!-- Cash App & Venmo Card -->
-        <div class="payment-card">
-            <img src="barcode.png" alt="Cash App & Venmo QR Codes">
-        </div>
-        <!-- Square QR Code Card -->
-        <div class="payment-card">
-           <img src="IMAGES1/square-qr_2.png" alt="Square QR Code">
-        </div>
-    </div>
-</div>
-
-<!-- Submit Order Details Button -->
-<div style="text-align: center; margin: 20px 0;">
-    <button type="submit" class="submit-order-btn" style="background-color: #28a745; color: white; padding: 12px 24px; font-size: 1em; border: none; border-radius: 5px; cursor: pointer;">Submit Order Details</button>
-</div>
-</form>
-
-<!-- Return Policy & Care Notice -->
-<p style="margin-top: 30px; font-size: 0.9em;">
-    <strong>Return Policy:</strong> Due to the sensitive metaphysical nature of the frequency of gemstones, returns are not accepted.
-</p>
-<p style="font-size: 0.9em; color: #aaa;">
-    <em>Note:</em> Under no circumstances will repairs be made due to normal wear and tear or environmental factors, such as water damage, extreme stretching of elastic cording, or cosmetic chemical damage, (including lotion, oils, perfumes), or any other factor which can weaken stone beads or cording.
-</p>
-
-<!-- Vibe Out Section -->
-<div class="vibe-section">
-    <h3>Vibe Out While You Shop</h3>
-    <p>Now Playing: Best Hip Hop Soul, Neo Soul & Conscious Rap Mix</p>
     
-    <!-- Embedded YouTube Player -->
-    <div class="video-container">
-        <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/sEUnkZOiueg" title="Neo Soul & Conscious Rap Mix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="payment-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+        
+        <!-- Cash App & Venmo Card -->
+        <div class="payment-card" style="background: #1a1a1a; padding: 20px; border: 1px solid #444; border-radius: 8px;">
+            <img src="barcode.png" alt="Cash App & Venmo QR Codes" style="max-width: 180px; width: 100%; height: auto; display: block; margin: 0 auto 10px auto;">
+            <h4 style="color: #fff; margin: 0; font-size: 0.95em;">Cash App / Venmo</h4>
+        </div>
+        
+       <!-- Square Checkout Option Box -->
+<div style="background: #1a1a1a; padding: 20px; border: 1px solid #444; border-radius: 8px; display: inline-block; text-align: center; vertical-align: top; max-width: 220px;">
+    
+    <!-- Code-drawn Square Icon (Explicitly styled with white background and black interior) -->
+    <div style="width: 45px; height: 45px; background: #ffffff; border-radius: 8px; display: flex; justify-content: center; align-items: center; margin: 0 auto 12px auto; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+        <div style="width: 20px; height: 20px; border: 3px solid #000000; background: #ffffff; border-radius: 4px; display: flex; justify-content: center; align-items: center;">
+            <div style="width: 7px; height: 7px; background: #000000; border-radius: 1px;"></div>
+        </div>
+    </div>
+    
+    <h4 style="color: #fff; margin: 0 0 5px 0; font-size: 1em;">Square Checkout</h4>
+    <p style="color: #aaa; font-size: 0.85em; margin: 0 0 15px 0;">Pay securely online</p>
+    
+    <!-- Official Square Checkout Link -->
+    <a href="https://square.link/u/DkgYsbgg" target="_blank" style="background-color: #e63946; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-size: 0.9em; display: inline-block;">Pay with Square</a>
+</div> 
+        
     </div>
 </div>
 
-<!-- Site Scripts -->
-<script>
-    function enterSite() {
-        // 1. Hide landing page and show gallery
-        document.getElementById('landing-page').style.display = 'none';
-        document.getElementById('gallery-page').style.display = 'block';
+        <!-- Submit Order Details Button -->
+        <div style="text-align: center; margin: 20px 0;">
+            <button type="submit" class="submit-order-btn">Submit Order</button>
+        </div>
+        </form>
+        <!-- Return Policy & Care Notice -->
+        <p style="margin-top: 30px; font-size: 0.9em;">
+            <strong>Return Policy:</strong> Due to the sensitive metaphysical nature of the frequency of gemstones, returns are not accepted.
+        </p>
+        <p style="font-size: 0.9em; color: #aaa;">
+            <em>Note:</em> Under no circumstances will repairs be made due to normal wear and tear or environmental factors, such as water damage, extreme stretching of elastic cording, or cosmetic chemical damage, (including lotion, oils, perfumes), or any other factor which can weaken stone beads or cording.
+        </p>
 
-        // 2. Trigger audio playback if available
-        var audioPlayer = document.getElementById('store-audio');
-        if (audioPlayer) {
-            audioPlayer.play().catch(function(error) {
-                console.log("Autoplay blocked by browser policy: ", error);
-            });
-        }
-    }
-</script>
-</body>
-</html>
+        <!-- Vibe Out Section -->
+        <div class="vibe-section">
+            <h3>Vibe Out While You Shop</h3>
+            <p>Now Playing: Best Hip Hop Soul, Neo Soul & Conscious Rap Mix</p>
+            
+            <!-- Embedded YouTube Player -->
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/sEUnkZOiueg" title="Neo Soul & Conscious Rap Mix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Site Scripts -->
+        <script>
+            function enterSite() {
+                // 1. Hide landing page and show gallery
+                document.getElementById('landing-page').style.display = 'none';
+                document.getElementById('gallery-page').style.display = 'block';
+
+                // 2. Trigger audio playback if available
+                var audioPlayer = document.getElementById('store-audio');
+                if (audioPlayer) {
+                    audioPlayer.play().catch(function(error) {
+                        console.log("Autoplay blocked by browser policy: ", error);
+                    });
+                }
+            }
+        </script>
+        </body>
+        </html>
